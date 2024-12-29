@@ -1,0 +1,13 @@
+.infoBox{
+    text-align: center;
+}
+
+.card-info{
+    border-radius:1rem;
+}
+
+.card_container {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
