@@ -5,16 +5,24 @@ import CardMedia from "@mui/material/CardMedia";
 
 import Typography from "@mui/material/Typography";
 
-export default function InfoBox({info}) {
-//   let info = {
-//     city: "Delhi",
-//     feelsLike: 10.82,
-//     humidity: 100,
-//     temp: 11.05,
-//     tempMax: 11.05,
-//     tempMin: 11.05,
-//     weather: "mist",
-//   };
+export default function InfoBox({ info }) {
+  //   let info = {
+  //     city: "Delhi",
+  //     feelsLike: 10.82,
+  //     humidity: 100,
+  //     temp: 11.05,
+  //     tempMax: 11.05,
+  //     tempMin: 11.05,
+  //     weather: "mist",
+  //   };
+
+  let COLD_URL =
+    "https://images.pexels.com/photos/300857/pexels-photo-300857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+  let HOT_URL =
+    "https://images.pexels.com/photos/946290/pexels-photo-946290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+  let RAIN_URL =
+    "https://images.pexels.com/photos/1529360/pexels-photo-1529360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+
   return (
     <div className="infoBox">
       {/* <h3>Weather info-{info.weather}</h3> */} <br />
@@ -22,7 +30,13 @@ export default function InfoBox({info}) {
         <Card sx={{ maxWidth: 345 }} className="card-info">
           <CardMedia
             sx={{ height: 140 }}
-            image="/dusty.jpg"
+            image={
+              info.humidity > 80
+                ? RAIN_URL
+                : info.temp > 15
+                ? HOT_URL
+                : COLD_URL
+            }
             title="green iguana"
           />
           <CardContent>

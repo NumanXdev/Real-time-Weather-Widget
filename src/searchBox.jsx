@@ -58,7 +58,7 @@ function SearchBox({ updateInfo }) {
     <div className="SearchBox">
       {/* <h3>Search for the Weather.</h3> */}
       {Error && (
-        <h3 style={{ color: "maroon", }}>
+        <h3 style={{ color: "maroon" }}>
           No Such Place Exists or an Error Occurred!
         </h3>
       )}
@@ -67,6 +67,21 @@ function SearchBox({ updateInfo }) {
           id="standard-basic"
           label="City Name"
           variant="standard"
+          //Gpt
+          sx={{
+            "& .MuiInputBase-root": {
+              color: "Black", // Change input field (inside) text color
+            },
+            "& .MuiInputLabel-root": {
+              color: "black", // Change label color
+            },
+            "& .MuiInputBase-root.Mui-focused": {
+              borderColor: "red", // Optional: Change border color when focused
+            },
+            "& .MuiInputLabel-root.Mui-focused": {
+              color: "maroon", // Optional: Change label color when focused
+            },
+          }}
           value={City}
           onChange={handleValue}
           required
