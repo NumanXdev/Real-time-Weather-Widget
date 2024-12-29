@@ -12,10 +12,13 @@ export default function WeatherApp() {
     tempMin: 11.05,
     weather: "mist",
   });
+  let updateInfo = (newInfo) => {
+    setWeatherInfo(newInfo);
+  };
   return (
     <div>
       <h2>Weather App</h2>
-      <SearchBox />
+      <SearchBox updateInfo={updateInfo} />
       <InfoBox info={weatherInfo} />
     </div>
   );
