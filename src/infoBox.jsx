@@ -5,19 +5,19 @@ import CardMedia from "@mui/material/CardMedia";
 
 import Typography from "@mui/material/Typography";
 
-export default function InfoBox() {
-  let info = {
-    city: "Delhi",
-    feelsLike: 10.82,
-    humidity: 100,
-    temp: 11.05,
-    tempMax: 11.05,
-    tempMin: 11.05,
-    weather: "mist",
-  };
+export default function InfoBox({info}) {
+//   let info = {
+//     city: "Delhi",
+//     feelsLike: 10.82,
+//     humidity: 100,
+//     temp: 11.05,
+//     tempMax: 11.05,
+//     tempMin: 11.05,
+//     weather: "mist",
+//   };
   return (
     <div className="infoBox">
-      <h3>Weather info-{info.weather}</h3>
+      {/* <h3>Weather info-{info.weather}</h3> */} <br />
       <div className="card_container">
         <Card sx={{ maxWidth: 345 }} className="card-info">
           <CardMedia

@@ -50,7 +50,7 @@ function SearchBox() {
 
   return (
     <div className="SearchBox">
-      <h3>Search for the Weather.</h3>
+      {/* <h3>Search for the Weather.</h3> */}
       <form onSubmit={handleSubmit}>
         <TextField
           id="standard-basic"
